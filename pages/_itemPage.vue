@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import BackIcon from '~/components/BackIcon.vue'
-import PrimaryButton from '~/components/PrimaryButton.vue'
+import BackIcon from '~/components/icons/BackIcon.vue'
+import PrimaryButton from '~/components/ui/PrimaryButton.vue'
 
 export default {
   components: { BackIcon, PrimaryButton },

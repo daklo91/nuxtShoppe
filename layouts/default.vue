@@ -2,7 +2,9 @@
   <div>
     <Header />
     <Nuxt />
-    <Snackbar v-for="item in snackbarStorage" :key="item.uid" :item="item" />
+    <div class="snackbar-display-container">
+      <Snackbar v-for="item in snackbarStorage" :key="item.uid" :item="item" />
+    </div>
   </div>
 </template>
 
@@ -19,3 +21,12 @@ export default {
   },
 }
 </script>
+
+<style>
+.snackbar-display-container {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  /* margin-left: -186px; */
+}
+</style>

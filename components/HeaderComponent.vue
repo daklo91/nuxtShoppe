@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import CartIcon from '~/components/CartIcon.vue'
+import CartIcon from '~/components/icons/CartIcon.vue'
 
 export default {
   components: { CartIcon },

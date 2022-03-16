@@ -20,12 +20,9 @@
               <span class="title">{{ item.title }}</span>
               <div>
                 <span class="price">Price: ${{ item.price }}</span>
-                <button
-                  class="remove_from_cart"
-                  @click="removeFromCart(item.uid)"
-                >
+                <SecondaryButton @click.native="removeFromCart(item.uid)">
                   Remove from cart
-                </button>
+                </SecondaryButton>
               </div>
             </div>
           </li>
@@ -42,11 +39,12 @@
 </template>
 
 <script>
-import BackIcon from '~/components/BackIcon.vue'
-import PrimaryButton from '~/components/PrimaryButton.vue'
+import BackIcon from '~/components/icons/BackIcon.vue'
+import PrimaryButton from '~/components/ui/PrimaryButton.vue'
+import SecondaryButton from '~/components/ui/SecondaryButton.vue'
 
 export default {
-  components: { BackIcon, PrimaryButton },
+  components: { BackIcon, PrimaryButton, SecondaryButton },
   computed: {
     cart() {
       return this.$store.state.cart
@@ -123,15 +121,6 @@ img {
   display: block;
   margin-bottom: 10px;
   display: block;
-}
-
-.remove_from_cart {
-  font-weight: bold;
-  background-color: rgb(238, 238, 238);
-  border: 0;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-left: -4px;
 }
 
 .continue_shopping {
