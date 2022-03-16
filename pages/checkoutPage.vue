@@ -29,7 +29,9 @@
         </ul>
       </div>
       <div>
-        <PrimaryButton>Continue to Checkout</PrimaryButton>
+        <PrimaryButton @click.native="openModal"
+          >Continue to Checkout</PrimaryButton
+        >
         <NuxtLink class="continue_shopping" to="/"
           >Or continue shopping</NuxtLink
         >
@@ -53,6 +55,9 @@ export default {
   methods: {
     removeFromCart(uid) {
       this.$store.commit('REMOVE_FROM_CART', uid)
+    },
+    openModal() {
+      this.$store.commit('TOGGLE_MODAL', true)
     },
   },
 }

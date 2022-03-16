@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Modal v-if="show" />
     <Header />
     <Nuxt />
     <div class="snackbar-display-container">
@@ -11,12 +12,17 @@
 <script>
 import Header from '~/components/HeaderComponent.vue'
 import Snackbar from '~/components/Snackbar.vue'
+import Modal from '~/components/Modal.vue'
 
 export default {
-  components: { Header, Snackbar },
+  components: { Header, Snackbar, Modal },
   computed: {
     snackbarStorage() {
       return this.$store.state.snackbarStorage
+    },
+    show() {
+      console.log(this.$store.state.showModal)
+      return this.$store.state.showModal
     },
   },
 }
@@ -27,6 +33,5 @@ export default {
   position: fixed;
   bottom: 5%;
   left: 5%;
-  /* margin-left: -186px; */
 }
 </style>

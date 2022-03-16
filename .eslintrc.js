@@ -16,7 +16,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['default', 'error', 'Snackbar'],
+        ignores: ['default', 'error', 'Snackbar', 'Modal'],
       },
     ],
   },

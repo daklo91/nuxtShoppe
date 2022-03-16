@@ -4,9 +4,13 @@ export const state = () => ({
   storeItems: [],
   cart: [],
   snackbarStorage: [],
+  showModal: false,
 })
 
 export const mutations = {
+  TOGGLE_MODAL(state, boolean) {
+    state.showModal = boolean
+  },
   SET_STORE_ITEMS(state, data) {
     state.storeItems = data
   },
