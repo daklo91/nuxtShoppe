@@ -22,7 +22,7 @@
                 <span class="price">Price: ${{ item.price }}</span>
                 <button
                   class="remove_from_cart"
-                  @click="removeFromCart(item.id)"
+                  @click="removeFromCart(item.uid)"
                 >
                   Remove from cart
                 </button>
@@ -53,8 +53,8 @@ export default {
     },
   },
   methods: {
-    removeFromCart(id) {
-      this.$store.commit('REMOVE_FROM_CART', id)
+    removeFromCart(uid) {
+      this.$store.commit('REMOVE_FROM_CART', uid)
     },
   },
 }

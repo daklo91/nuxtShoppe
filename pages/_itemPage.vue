@@ -31,7 +31,8 @@ export default {
   },
   methods: {
     addToCart() {
-      this.$store.commit('ADD_TO_CART', this.item)
+      const copy = Object.assign({}, this.item)
+      this.$store.dispatch('addItem', copy)
     },
   },
 }
