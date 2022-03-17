@@ -19,9 +19,15 @@ export const mutations = {
     state.snackbarStorage.push(item)
   },
   REMOVE_FROM_CART(state, uid) {
-    const object = state.cart.find((el) => el.uid === uid)
-    object.status = 'removed'
-    state.snackbarStorage.push(object)
+    const snackbarItemIndex = state.snackbarStorage.findIndex(
+      (el) => el.uid === uid
+    )
+    const cartItem = state.cart.find((el) => el.uid === uid)
+    if (snackbarItemIndex !== -1) {
+      state.snackbarStorage.splice(snackbarItemIndex, 1)
+    }
+    cartItem.status = 'removed'
+    state.snackbarStorage.push(cartItem)
     const i = state.cart.map((item) => item.uid).indexOf(uid)
     state.cart.splice(i, 1)
   },

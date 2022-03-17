@@ -57,6 +57,7 @@ li {
   border: 0.5px solid rgba(217, 217, 217, 0.8);
   border-radius: 8px;
   padding: 10px;
+  background-color: white;
 }
 
 li:hover {
