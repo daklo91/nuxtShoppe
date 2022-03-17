@@ -51,7 +51,8 @@ export default {
 .container {
   margin: auto;
   padding: 0 30px;
-  width: 375px;
+  max-width: 375px;
+  margin-top: 20px;
 }
 
 .image_container {
@@ -89,5 +90,14 @@ p {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+  .image_container {
+    width: 200px;
+  }
+  img {
+    height: 200px;
+  }
 }
 </style>

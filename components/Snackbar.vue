@@ -78,4 +78,12 @@ export default {
   margin-left: auto;
   white-space: nowrap;
 }
+
+@media screen and (max-width: 420px) {
+  .snackbar-container {
+    width: 85%;
+    margin: auto;
+    margin-top: 5px;
+  }
+}
 </style>

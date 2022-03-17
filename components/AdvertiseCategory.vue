@@ -41,11 +41,16 @@ h2 {
   line-height: 17px;
 }
 
+h2 {
+  margin-left: 20px;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  justify-content: center;
 }
 
 li {
@@ -70,5 +75,17 @@ img {
   height: 120px;
   width: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 410px) {
+  li {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  li {
+    margin: 5px;
+  }
 }
 </style>

@@ -34,4 +34,10 @@ export default {
   bottom: 5%;
   left: 5%;
 }
+
+@media screen and (max-width: 420px) {
+  .snackbar-display-container {
+    left: 0;
+  }
+}
 </style>

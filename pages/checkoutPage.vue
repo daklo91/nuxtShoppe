@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .container {
-  width: 375px;
+  max-width: 375px;
   min-height: 85vh;
   text-align: center;
   display: flex;
@@ -82,8 +82,14 @@ export default {
   margin-right: 10px;
 }
 
+.items_left_text {
+  display: block;
+  margin-top: 20px;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 li {
@@ -136,5 +142,11 @@ img {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+  li {
+    margin-bottom: 50px;
+  }
 }
 </style>

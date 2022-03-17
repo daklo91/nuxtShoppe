@@ -66,4 +66,10 @@ header {
 .bopp {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 500px) {
+  header {
+    padding-right: 5px;
+  }
+}
 </style>
